@@ -1,5 +1,8 @@
 <?php
 
+    ini_set('display_errors', 'on');
+    error_reporting(E_ALL);
+
 	$executionStartTime = microtime(true) / 1000;
 
 	$url='http://api.geonames.org/postalCodeSearchJSON?maxRows=10&postalcode=' . $_REQUEST['postalCode'] . '&username=liamowen';

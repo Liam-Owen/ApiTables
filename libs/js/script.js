@@ -14,9 +14,10 @@ $('#button1').click(function() {
 
             if (result.status.name == "ok") {
 
-                $('postalCodeResults').show();
+                $('postalCodeResults').toggle();
                 $('#txtPostalCode').html(result['data'][0]['postalCode']);
                 $('#txtCountry').html(result['data'][0]['countryCode']);
+                $('#txtAdminName').html(result['data'][0]['adminName3']);
                 $('#txtPlaceName').html(result['data'][0]['placeName']);
              
 
