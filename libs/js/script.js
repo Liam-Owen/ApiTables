@@ -1,3 +1,4 @@
+//Postal code searcher Api
 $('#button1').click(function() {
 
     $.ajax({
@@ -19,6 +20,40 @@ $('#button1').click(function() {
                 $('#txtCountry').html(result['data'][0]['countryCode']);
                 $('#txtAdminName').html(result['data'][0]['adminName3']);
                 $('#txtPlaceName').html(result['data'][0]['placeName']);
+             
+
+            }
+        
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            // your error code
+        }
+    }); 
+
+
+});
+
+//wiki api 
+$('#button2').click(function() {
+
+    $.ajax({
+        url: "libs/php/wikipedia.php",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            postalCode: $('#postalCodeTwo').val(),
+            
+        },
+        success: function(result) {
+
+            console.log(result);
+
+            if (result.status.name == "ok") {
+
+                $('wikiResults').toggle();
+                $('#title').html(result['data'][0]['title']);
+                $('#topWikiLink').html(result['data'][0]['wikipediaUrl']);
+               
              
 
             }
