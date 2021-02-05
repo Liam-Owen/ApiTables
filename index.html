@@ -1,77 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="libs/css/index.css" />
+    <meta charset="utf-8" />
 
-	<head>
-		<link rel="stylesheet" href="libs/css/index.css">
-		<meta charset="utf-8">
+    <title>Api Tables</title>
+    <h1>Api Tables</h1>
+  </head>
 
-		<title>Api Tables</title>
-		<h1>Api Tables</h1>
+  <body>
+    <table id="table" style="width: 100%">
+      <tr>
+        <th>Api Name</th>
+        <th>Description</th>
+        <th>Submit</th>
+      </tr>
+      <tr>
+        <td>Postal Code Searcher</td>
+        <td>
+          Enter a postcode to reveal area <br />
+          <label for="postalCode">Postal Code:</label>
+          <input type="text" id="postalCode" name="postalCode" /><br /><br />
+        </td>
+        <td><button id="button1">Submit</button></td>
+      </tr>
+      <tr>
+        <td>Wikipedia link by Postal Code</td>
+        <td>
+          Enter postcode to find top wiki link for that area <br />
+          <label for="postalCodeTwo">Postal Code:</label>
+          <input
+            type="text"
+            id="postalCodeTwo"
+            name="postalCodeTwo"
+          /><br /><br />
+        </td>
+        <td><button id="button2">Submit</button></td>
+      </tr>
+      <tr>
+        <td>Ocean finder</td>
+        <td> 
+			<label for="latitude">latitude:</label>
+			<input
+            type="text"
+            id="latitude"
+            name="latitude" />
+			<label for="longitude">longitude:</label>
+			<input
+            type="text"
+            id="longitude"
+            name="longitude"
+          /></td>
+        <td><button id="button3">Submit</button></td>
+      </tr>
+    </table>
 
-	</head>
+    <!-- Results from api searches displayed below-->>
+    <div id="results"></div>
+    <h1>Results</h1>
+    <table id="postalCodeResults">
+      <tr>
+        <th>Postal Code</th>
+        <th>Country Code</th>
+        <th>District</th>
+        <th>Place Name</th>
+      </tr>
+      <tr>
+        <td id="txtPostalCode"></td>
+        <td id="txtCountry"></td>
+        <td id="txtAdminName"></td>
+        <td id="txtPlaceName"></td>
+	  </tr>
+    </table>
+<br>
+    <table id="WikiResults">
+      <tr>
+        <th>Title</th>
+        <th>Wiki</th>
+      </tr>
+      <tr>
+        <td id="title"></td>
+        <td id="topWikiLink"></td>
+      </tr>
+	</table>
+	<br>
+	<table id="oceanResults">
+		<tr>
+		  <th>Name of Ocean</th>
+		</tr>
+		<tr>
+		  <td id="ocean"></td>
+		</tr>
+	  </table>
 
-	<body>
-		<table id="table" style="width:100%">
-			<tr>
-			  <th>Api Name</th>
-			  <th>Description</th>
-			  <th>Submit</th>
-			</tr>
-			<tr>
-			  <td>Postal Code Searcher</td>
-			  <td>Enter a postcode to reveal area <br>
-				<label for="postalCode">Postal Code:</label>
-				<input type="text" id="postalCode" name="postalCode"><br><br></td>
-			  <td><button id="button1">Submit</button></td>
-			</tr>
-			<tr>
-			  <td>Wikipedia link by Postal Code</td>
-			  <td>Enter postcode to find top wiki link for that area <br>
-				  <label for="postalCodeTwo">Postal Code:</label>
-				<input type="text" id="postalCodeTwo" name="postalCodeTwo"><br><br></td>
-			  <td><button id="button2">Submit</button></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td><button id="button3">Submit</button></td>
-			  </tr>
-		  </table>
-		  
-		  <!-- Results from api searches displayed below-->> 
-		  <div id='results'></div>
-		  <h1>Results</h1>
-		  <table id='postalCodeResults'>
-			  <tr>
-				  <th> Postal Code</th>
-				  <th> Country Code</th>
-				  <th> District</th>
-				  <th> Place Name</th>
-			  </tr>
-			  <tr>
-				  <td id='txtPostalCode'> </td>
-				  <td id='txtCountry'> </td>
-				  <td id='txtAdminName'> </td>
-				  <td id='txtPlaceName'> </td>
-			  </tr>
-		  </table>
-
-		  <table id='WikiResults'>
-			<tr>
-				<th> Title</th>
-				<th> Wiki</th>
-			</tr>
-			<tr>
-				<td id='title'> </td>
-				<td id='topWikiLink'> </td>
-			</tr>
-		</table>
-
-
-		<script type="application/javascript" src="libs/vendors/Jquery/jquery.js"></script>
-		<script type="application/javascript" src="libs/js/script.js"></script>
-
-	</body>
-
+    <script
+      type="application/javascript"
+      src="libs/vendors/Jquery/jquery.js"
+    ></script>
+    <script type="application/javascript" src="libs/js/script.js"></script>
+  </body>
 </html>
