@@ -3,18 +3,56 @@
 <html lang="en">
 
 	<head>
-
+		<link rel="stylesheet" href="libs/css/index.css">
 		<meta charset="utf-8">
 
 		<title>Api Tables</title>
-		Test
+		Api Table
 
 	</head>
 
 	<body>
+		<table id="table" style="width:100%">
+			<tr>
+			  <th>Api Name</th>
+			  <th>Description</th>
+			  <th>Submit</th>
+			</tr>
+			<tr>
+			  <td>Postal Code Searcher</td>
+			  <td>Enter a postcode to reveal area <br>
+				<label for="postalCode">Postal Code:</label>
+				<input type="text" id="postalCode" name="postalCode"><br><br></td>
+			  <td><button id="button1">Submit</button></td>
+			</tr>
+			<tr>
+			  <td></td>
+			  <td></td>
+			  <td><button id="button2">Submit</button></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><button id="button3">Submit</button></td>
+			  </tr>
+		  </table>
+
+		  <div id='results'></div>
+		  <table id='postalCodeResults'>
+			  <tr>
+				  <th> Postal Code</th>
+				  <th> Country Code</th>
+				  <th> Place Name</th>
+			  </tr>
+			  <tr>
+				  <td id='txtPostalCode'> </td>
+				  <td id='txtCountry'> </td>
+				  <td id='txtPlaceName'> </td>
+			  </tr>
+		  </table>
 
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="application/javascript" src="libs/vendors/Jquery/jquery.js"></script>
 		<script type="application/javascript" src="libs/js/script.js"></script>
 
 	</body>
