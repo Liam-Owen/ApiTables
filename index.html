@@ -2,14 +2,20 @@
 
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="libs/css/index.css" />
-    <meta charset="utf-8" />
+    
+	<meta charset="utf-8" />
+	<meta name="author" content="Liam Owen">
+	<meta name="description" content="PHP Api examples">
+	<meta name="viewport" content= "width=device-width, initial scale=1"> 
 
-    <title>Api Tables</title>
-    <h1>Api Tables</h1>
+	<title>Api Tables</title>
+	<link rel="stylesheet" href="libs/vendors/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" href="libs/css/index.css" />
+	<link rel="icon" href="favicon.ico"/>
   </head>
 
   <body>
+	<h1>Api Tables</h1>
     <table id="table" style="width: 100%">
       <tr>
         <th>Api Name</th>
@@ -40,18 +46,12 @@
       </tr>
       <tr>
         <td>Ocean finder</td>
-        <td> 
-			<label for="latitude">latitude:</label>
-			<input
-            type="text"
-            id="latitude"
-            name="latitude" />
-			<label for="longitude">longitude:</label>
-			<input
-            type="text"
-            id="longitude"
-            name="longitude"
-          /></td>
+        <td>
+          <label for="latitude">latitude:</label>
+          <input type="text" id="latitude" name="latitude" />
+          <label for="longitude">longitude:</label>
+          <input type="text" id="longitude" name="longitude" />
+        </td>
         <td><button id="button3">Submit</button></td>
       </tr>
     </table>
@@ -71,9 +71,9 @@
         <td id="txtCountry"></td>
         <td id="txtAdminName"></td>
         <td id="txtPlaceName"></td>
-	  </tr>
+      </tr>
     </table>
-<br>
+    <br />
     <table id="WikiResults">
       <tr>
         <th>Title</th>
@@ -83,21 +83,19 @@
         <td id="title"></td>
         <td id="topWikiLink"></td>
       </tr>
-	</table>
-	<br>
-	<table id="oceanResults">
-		<tr>
-		  <th>Name of Ocean</th>
-		</tr>
-		<tr>
-		  <td id="ocean"></td>
-		</tr>
-	  </table>
+    </table>
+    <br />
+    <table id="oceanResults">
+      <tr>
+        <th>Name of Ocean</th>
+      </tr>
+      <tr>
+        <td id="ocean"></td>
+      </tr>
+    </table>
 
-    <script
-      type="application/javascript"
-      src="libs/vendors/Jquery/jquery.js"
-    ></script>
-    <script type="application/javascript" src="libs/js/script.js"></script>
+    <script type="application/javascript" src="libs/vendors/Jquery/jquery.js"></script>
+	<script type="application/javascript" src="libs/js/script.js"></script>
+	<script type="application/javascript" src="libs/vendors/bootstrap/bootstrap.min.js"></script>
   </body>
 </html>

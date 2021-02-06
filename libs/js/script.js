@@ -19,7 +19,9 @@ $("#button1").click(function () {
       }
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      // your error code
+        jqXHR.status = 404;
+        let errorMessage = jqXHR.status + ': ' + textStatus + ' - ' + errorThrown;
+        alert (errorMessage)
     },
   });
 });
@@ -43,30 +45,33 @@ $("#button2").click(function () {
       }
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      // your error code
+        jqXHR.status = 404;
+        let errorMessage = jqXHR.status + ': ' + textStatus + ' - ' + errorThrown;
+        alert (errorMessage)
     },
   });
 });
-//ocean api
+//Ocean api
 $("#button3").click(function () {
-    $.ajax({
-      url: "libs/php/ocean.php",
-      type: "POST",
-      dataType: "json",
-      data: {
-        latitude: $("#latitude").val(),
-        longitude: $("#longitude").val(),
-      },
-      success: function (result) {
-        console.log(result);
-  
-        if (result.status.name == "ok") {
-          $("#ocean").html(result["data"]["name"]);
-       
-        }
-      },
-      error: function (jqXHR, textStatus, errorThrown) {
-        // your error code
-      },
-    });
+  $.ajax({
+    url: "libs/php/ocean.php",
+    type: "POST",
+    dataType: "json",
+    data: {
+      latitude: $("#latitude").val(),
+      longitude: $("#longitude").val(),
+    },
+    success: function (result) {
+      console.log(result);
+
+      if (result.status.name == "ok") {
+        $("#ocean").html(result["data"]["name"]);
+      }
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+        jqXHR.status = 404;
+        let errorMessage = jqXHR.status + ': ' + textStatus + ' - ' + errorThrown;
+        alert (errorMessage)
+    },
   });
+});
