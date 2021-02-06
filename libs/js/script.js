@@ -21,7 +21,7 @@ $("#button1").click(function () {
     error: function (jqXHR, textStatus, errorThrown) {
         jqXHR.status = 404;
         let errorMessage = jqXHR.status + ': ' + textStatus + ' - ' + errorThrown;
-        alert (errorMessage)
+        alert (errorMessage);
     },
   });
 });
@@ -47,7 +47,7 @@ $("#button2").click(function () {
     error: function (jqXHR, textStatus, errorThrown) {
         jqXHR.status = 404;
         let errorMessage = jqXHR.status + ': ' + textStatus + ' - ' + errorThrown;
-        alert (errorMessage)
+        alert (errorMessage);
     },
   });
 });
@@ -71,7 +71,7 @@ $("#button3").click(function () {
     error: function (jqXHR, textStatus, errorThrown) {
         jqXHR.status = 404;
         let errorMessage = jqXHR.status + ': ' + textStatus + ' - ' + errorThrown;
-        alert (errorMessage)
+        alert (errorMessage);
     },
   });
 });
